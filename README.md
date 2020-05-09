@@ -1,7 +1,7 @@
 # helm-jsonnet-demo
 
 This is a proof of concept illustration of how jsonnet (via ycat) can be used
-as a helm post-renderer.
+as a helm post-renderer (https://helm.sh/docs/topics/advanced/#post-rendering).
 
 ## Instructions
 
