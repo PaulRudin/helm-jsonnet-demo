@@ -3,6 +3,7 @@
 This is a proof of concept illustration of how jsonnet (via ycat) can be used
 as a helm post-renderer (https://helm.sh/docs/topics/advanced/#post-rendering).
 
+
 ## Instructions
 
 * Clone this repo
@@ -24,3 +25,11 @@ You should see that each k8s object has the label `foo: bar`
     * Files are applied in the order that shell globbing gives. If necessary
       just use one processor, optionally importing jsonnet files from
       elsewhere.
+
+## Motivation
+
+When consuming third party helm charts you can only modify the resulting k8s
+objects to the extent that the chart author has anticipated your customisation
+use case and added a suitable interface. Post renderers allow for arbitrary
+changes to the k8s objects created from the chart's templates before helm
+actually applies them to your cluster.
