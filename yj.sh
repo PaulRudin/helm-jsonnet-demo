@@ -1,2 +1,3 @@
 #!/bin/bash
-ycat  - processors/*.jsonnet
+yq r - -d'*' -j -c | jsonnet driver.jsonnet |yq r - -d'*' --prettyPrint
+
